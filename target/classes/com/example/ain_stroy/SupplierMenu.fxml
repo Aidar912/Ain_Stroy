@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="439.0" maxWidth="727.0" minHeight="439.0" minWidth="727.0" prefHeight="439.0" prefWidth="727.0" style="-fx-background-color: #061F3E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ain_stroy.SupplierMenu">
+    <children>
+      <ImageView fitHeight="103.0" fitWidth="109.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="63.0" AnchorPane.topAnchor="1.0">
+         <image>
+            <Image url="@tools/rectange.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image" fitHeight="50.0" fitWidth="50.0" layoutX="5.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="90.0">
+         <image>
+            <Image url="@tools/rectange.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="64.0" layoutY="171.0" text="User name:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="106.0">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="196.0" text="Account type:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="128.0">
+         <font>
+            <Font name="Arial Black" size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_show_list" contentDisplay="TOP" layoutY="221.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button1" stylesheets="@style.css" text="Show the list of materials" textFill="#f7f7f7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="172.0">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_to_order" contentDisplay="TOP" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Show materials to oreder" textFill="#f7f7f7" AnchorPane.topAnchor="201.0">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_show_deliverd" contentDisplay="TOP" layoutY="230.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Show delivered materials" textFill="#f7f7f7" AnchorPane.topAnchor="230.0">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="WithdrawMoneyButton" contentDisplay="TOP" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Withdraw money" textFill="#f7f7f7">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_about" contentDisplay="TOP" layoutY="376.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="About the program" textFill="#f7f7f7">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_add_mat" contentDisplay="TOP" layoutY="288.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Add materials" textFill="#f7f7f7">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Exit" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="423.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button2" stylesheets="@style.css" text="&lt;             Exit" textFill="#e70909" AnchorPane.bottomAnchor="3.6" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="LabelUserName" layoutX="145.0" layoutY="104.0" prefHeight="18.0" prefWidth="86.0" text="  " textFill="RED">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelAccountType" layoutX="157.0" layoutY="127.0" prefHeight="18.0" prefWidth="69.0" text="   " textFill="RED">
+         <font>
+            <Font name="Bodoni MT Black" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="AnchorPaneListMaterials" layoutX="335.0" layoutY="72.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.leftAnchor="228.90000000000015" AnchorPane.rightAnchor="6.8999999999999" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="32.399993896484375" layoutX="155.0" layoutY="14.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="75.0" layoutY="15.0" text="Show the list of materials" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="MaterialsListTable" layoutX="14.0" layoutY="67.0" prefHeight="284.0" prefWidth="464.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="MaterialsNameCol" prefWidth="176.0000820159912" styleClass="Col" text="Materials" />
+                <TableColumn fx:id="UOMCol" prefWidth="126.39996337890625" styleClass="Col" text="UOM" />
+                  <TableColumn fx:id="QuantityCol" prefWidth="80.79998779296875" styleClass="Col" text="Quantity" />
+                  <TableColumn fx:id="PriceMaterialsCol" prefWidth="77.60009765625" style="-fx-text-fill: red;" styleClass="Col" text="Price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="SearchField" layoutX="328.0" layoutY="351.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneMaterialsToOrdered" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="32.399993896484375" layoutX="115.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="35.0" layoutY="16.0" text="Show material to ordered" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="OrderedMaterialsTable" layoutX="14.0" layoutY="62.0" prefHeight="328.0" prefWidth="464.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="OrderedMaterialsNameCol" prefWidth="160.00001525878906" styleClass="Col" text="Materials" />
+                <TableColumn fx:id="OrderedMaterialsQuantityCol" prefWidth="107.20001220703125" styleClass="Col" text="Quantity" />
+                  <TableColumn fx:id="OrderedMaterialsPriceCol" prefWidth="92.0" styleClass="Col" text="Price" />
+                  <TableColumn fx:id="OrderedMaterialsUOMCol" prefWidth="100.79998779296875" styleClass="Col" text="UOM" />
+              </columns>
+            </TableView>
+            <TextField fx:id="OrderedMaterialsSearch" layoutX="15.0" layoutY="390.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneDeliveredMaterials" layoutX="227.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="32.399993896484375" layoutX="115.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="35.0" layoutY="16.0" text="Show delivered materials" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="DeliveredMaterialsTable" layoutX="14.0" layoutY="64.0" prefHeight="315.0" prefWidth="464.0" stylesheets="@style.css">
+               <columns>
+                  <TableColumn fx:id="DeliveredMaterialsNameCol" prefWidth="176.0000820159912" styleClass="Col" text="Materials" />
+                  <TableColumn fx:id="DeliveredUOMCol" prefWidth="126.39996337890625" styleClass="Col" text="UOM" />
+                  <TableColumn fx:id="DeliveredQuantityCol" prefWidth="80.79998779296875" styleClass="Col" text="Quantity" />
+                  <TableColumn fx:id="DeliveredPriceMaterialsCol" prefWidth="77.60009765625" style="-fx-text-fill: red;" styleClass="Col" text="Price" />
+                  <TableColumn fx:id="DeliveredTimeCol" prefWidth="75.0" styleClass="Col" text="Date" />
+               </columns>
+            </TableView>
+            <TextField fx:id="DeliveredMaterialsSearch" layoutX="16.0" layoutY="379.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneAddMaterials" layoutX="239.0" layoutY="17.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.899999999999989" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.0" endY="28.79998779296875" layoutX="125.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="37.0" layoutY="15.0" text="Add materials" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="AddMaterialsNameField" layoutX="24.0" layoutY="78.0" promptText="Material name" />
+            <TextField fx:id="AddQuantityField" layoutX="206.0" layoutY="78.0" promptText="Quantity" />
+            <TextField fx:id="AddPriceField" layoutX="25.0" layoutY="127.0" promptText="Price" />
+            <TextArea fx:id="AddDescriptionArea" layoutX="26.0" layoutY="169.0" prefHeight="200.0" prefWidth="200.0" promptText="Description material" />
+            <TextField fx:id="AddUOMField" layoutX="205.0" layoutY="127.0" promptText="Unit of measurement" />
+            <Button fx:id="AddButton" layoutX="425.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #061F3E;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="EditAccount" contentDisplay="TOP" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Edit account" textFill="#f7f7f7">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="AboutTheProgramPane" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <ScrollPane layoutX="14.0" layoutY="56.0" prefHeight="356.0" prefWidth="491.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.60000000000002">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="480.0">
+                     <children>
+                        <TextFlow fx:id="AboutTheProgrammText" layoutX="20.0" layoutY="8.0" prefHeight="518.0" prefWidth="452.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Button “show the list of materials”.Allows the supplier to see all available materials.Button “show materials to order”.Shows the list of materials that the construction company orderedButton “Show delivered materials”.Shows the list of delivered materials.Button “Show percentage”.Shows  the percentage of already delivered materials from the order.                       Button “Add materials”.              Adding materials to stock by     writing:   id    name      measurement     quantity    price" wrappingWidth="288.5367660522461">
+                                 <font>
+                                    <Font name="Book Antiqua Bold Italic" size="21.0" />
+                                 </font></Text>
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="48.0" layoutY="23.0" text="About the program" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="-69.0" layoutY="16.0" startX="99.99998474121094" startY="41.399993896484375" stroke="RED" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="MyMaterialsButton" contentDisplay="TOP" layoutY="317.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="My materials" textFill="#f7f7f7">
+         <font>
+            <Font name="Broadway" size="12.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="AnchorPaneMyMaterials" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Label layoutX="33.0" layoutY="23.0" text="My materials" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="-84.0" layoutY="16.0" startX="99.99998474121094" startY="41.399993896484375" stroke="RED" />
+            <TableView fx:id="MyMaterialsTable" layoutX="16.0" layoutY="70.0" prefHeight="168.0" prefWidth="450.0">
+               <columns>
+                  <TableColumn fx:id="MyMaterialsName" prefWidth="140.00001525878906" text="Materials" />
+                  <TableColumn fx:id="MyMaterialsQuantity" prefWidth="72.0" text="Quantity" />
+                  <TableColumn fx:id="MyMaterialsUOM" prefWidth="68.0" text="UOM" />
+                  <TableColumn fx:id="MyMaterialsPrice" prefWidth="73.60003662109375" text="Price" />
+                  <TableColumn fx:id="MyMaterialsDescription" prefWidth="95.199951171875" text="Description" />
+               </columns>
+            </TableView>
+            <TextField fx:id="MyMaterialsNameField" layoutX="18.0" layoutY="262.0" prefHeight="26.0" prefWidth="103.0" promptText="Material" />
+            <TextField fx:id="MyMaterialsQuantityField" layoutX="130.0" layoutY="262.0" prefHeight="26.0" prefWidth="103.0" promptText="Quantity" />
+            <TextField fx:id="MyMaterialsPriceField" layoutX="241.0" layoutY="262.0" prefHeight="26.0" prefWidth="103.0" promptText="Price" />
+            <TextField fx:id="MyMaterialsUOMField" layoutX="351.0" layoutY="262.0" prefHeight="26.0" prefWidth="103.0" promptText="UOM" />
+            <TextArea fx:id="MyMaterialsDescriptionArea" layoutX="19.0" layoutY="299.0" prefHeight="114.0" prefWidth="258.0" promptText="Description" />
+            <Button fx:id="MyMaterialsSaveButton" layoutX="394.0" layoutY="387.0" mnemonicParsing="false" text="Save" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneWithdrawMoney" layoutX="221.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Label layoutX="32.0" layoutY="22.0" text="Withdraw money" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="-85.0" layoutY="15.0" startX="99.99998474121094" startY="41.399993896484375" stroke="RED" />
+            <Text layoutX="32.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance:">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="BalanceTextField" layoutX="115.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Book Antiqua Bold" size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="HowMuchField" layoutX="30.0" layoutY="131.0" promptText="How much?" />
+            <Button fx:id="DismountButton" layoutX="392.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: #061F3E;" text="Dismount" textFill="WHITE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="NotEnoughMoneyText" fill="RED" layoutX="196.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not enough money" visible="false">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

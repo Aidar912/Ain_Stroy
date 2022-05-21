@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="727.0" style="-fx-background-color: #061F3E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ain_stroy.SalesDepartament">
+    <children>
+      <AnchorPane fx:id="AnchorPaneSellApartments" layoutX="230.00000000000006" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="5.7999999999999545" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="30.79998779296875" layoutX="124.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="33.0" layoutY="14.0" text="Sell apartment" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ProjectsName" layoutX="23.0" layoutY="88.0" prefWidth="150.0" promptText="Projects name" styleClass="Col" stylesheets="@style.css" />
+            <TextField fx:id="NameFiled" layoutX="23.0" layoutY="145.0" promptText="Name" />
+            <ComboBox fx:id="ApartmentsType" layoutX="202.0" layoutY="89.0" prefWidth="150.0" promptText="Apartments type" styleClass="Col" stylesheets="@style.css" />
+            <TextField fx:id="PassportNumber" layoutX="203.0" layoutY="145.0" promptText="Passport number" />
+            <ComboBox fx:id="SexStatus" layoutX="23.0" layoutY="188.0" prefWidth="150.0" promptText="Sex" />
+            <ComboBox fx:id="MaritalStatus" layoutX="202.0" layoutY="188.0" prefWidth="150.0" promptText="Marital status" />
+            <TextField fx:id="Couple_sName" layoutX="23.0" layoutY="224.0" promptText="Name" visible="false" />
+            <TextField fx:id="Couple_sPassport" layoutX="203.0" layoutY="224.0" promptText="Passport number" visible="false" />
+            <CheckBox fx:id="Caption" layoutX="251.0" layoutY="271.0" mnemonicParsing="false" text="Caption">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="CoupleCaption" layoutX="337.0" layoutY="271.0" mnemonicParsing="false" text="Couple caption" visible="false">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="ShowContractButton" layoutX="421.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff; -fx-background-radius: 6; -fx-border-radius: 6;" text="Cell" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Book Antiqua Bold" size="12.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="SellDate" layoutX="246.0" layoutY="378.0" prefHeight="26.0" prefWidth="133.0" />
+            <ScrollPane layoutX="10.0" layoutY="250.0" prefHeight="170.0" prefWidth="230.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="213.0">
+                     <children>
+                        <Text fx:id="InfoText" layoutX="-1.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="208.79995117187502" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneApartmentsForSale" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="34.600006103515625" layoutX="133.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="42.0" layoutY="17.0" text="Apartments for sale" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </Label>
+            <TableView fx:id="SaleTable" layoutX="14.0" layoutY="76.0" prefHeight="200.0" prefWidth="471.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="SaleProjectsName" prefWidth="241.6000518798828" styleClass="Col" text="Projects name" />
+                <TableColumn fx:id="SaleLuxury" prefWidth="72.0" styleClass="Col" text="Luxury" />
+                  <TableColumn fx:id="SaleBusiness" prefWidth="77.5999755859375" styleClass="Col" text="Business" />
+                  <TableColumn fx:id="SaleEconomy" prefWidth="76.0" styleClass="Col" text="Economy" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="SaleInfo" layoutX="14.0" layoutY="327.0" prefWidth="150.0" promptText="Info" />
+            <TextField fx:id="SaleSearch" layoutX="13.0" layoutY="289.0" promptText="Search" />
+            <ScrollPane layoutX="181.0" layoutY="283.0" prefHeight="134.0" prefWidth="302.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="336.0" prefWidth="283.0">
+                     <children>
+                        <Text fx:id="SaleTextInfo" layoutX="5.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info about apartment" wrappingWidth="297.6000274658203" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+        <AnchorPane fx:id="AnchorPaneSoldApartments" layoutX="177.0" layoutY="1.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="35.600006103515625" layoutX="138.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="46.0" layoutY="20.0" text="Sold apartments" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="SoldTable" layoutX="10.0" layoutY="82.0" prefHeight="218.0" prefWidth="471.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="SoldProjectsName" prefWidth="229.59992694854736" styleClass="Col" text="Projects name" />
+                <TableColumn fx:id="SoldLuxury" prefWidth="74.40010070800781" styleClass="Col" text="Luxury" />
+                  <TableColumn fx:id="SoldBusiness" prefWidth="81.59991455078125" styleClass="Col" text="Business" />
+                  <TableColumn fx:id="SoldEconomy" prefWidth="80.800048828125" styleClass="Col" text="Economy" />
+              </columns>
+            </TableView>
+            <TextField fx:id="SoldSearch" layoutX="14.0" layoutY="321.0" promptText="Search" />
+         </children></AnchorPane>
+        <ImageView fitHeight="103.0" fitWidth="109.0" layoutX="62.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="63.0" AnchorPane.topAnchor="1.0">
+            <image>
+                <Image url="@tools/rectange.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="82.0" layoutY="116.0" text="User name:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="106.0">
+            <font>
+                <Font name="Arial Black" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="82.0" layoutY="138.0" text="Account type:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="128.0">
+            <font>
+                <Font name="Arial Black" size="10.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelUserName" layoutX="143.0" layoutY="104.0" prefHeight="18.0" prefWidth="86.0" text="  " textFill="RED">
+            <font>
+                <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelAccountType" layoutX="151.0" layoutY="126.0" prefHeight="18.0" prefWidth="69.0" text="   " textFill="RED">
+            <font>
+                <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="SoldApartments" layoutX="10.0" layoutY="179.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button1" stylesheets="@style.css" text="Sold apartments" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="179.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="ApartmentsForSale" layoutX="10.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Apartments for sale" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="209.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="UnfinishedApartments" layoutX="10.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Unfinished apartments" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="239.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="SellApartments" layoutX="10.0" layoutY="268.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Sell apartment" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="268.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="AboutTheProgram" layoutX="10.0" layoutY="384.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="About the program" textFill="WHITE" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="Exit" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="415.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button2" stylesheets="@style.css" text="&lt;             Exit" textFill="#e70909" AnchorPane.bottomAnchor="3.6" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="EditAccount" contentDisplay="TOP" layoutX="10.0" layoutY="357.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Edit account" textFill="#f7f7f7" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="90.0">
+            <image>
+                <Image url="@tools/rectange.png" />
+            </image>
+        </ImageView>
+      <AnchorPane fx:id="AboutTheProgramPane" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false">
+         <children>
+            <ScrollPane layoutX="14.0" layoutY="56.0" prefHeight="356.0" prefWidth="491.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.60000000000002">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="480.0">
+                     <children>
+                        <TextFlow fx:id="AboutTheProgrammText" layoutX="20.0" layoutY="8.0" prefHeight="518.0" prefWidth="452.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="288.5367660522461" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="48.0" layoutY="23.0" text="About the program" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="-69.0" layoutY="16.0" startX="99.99998474121094" startY="41.399993896484375" stroke="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneUnfinishedApartments" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="29.20001220703125" layoutX="115.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="34.0" layoutY="21.0" text="Unfinished apartments" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="UnfinishedTable" layoutX="14.0" layoutY="57.0" prefHeight="274.0" prefWidth="471.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="UnfinishedProjectsName" prefWidth="160.00001525878906" styleClass="Col" text="Project name" />
+                <TableColumn fx:id="UnfinishedLuxPrice" prefWidth="80.79998779296875" styleClass="Col" text="Luxury apart" />
+                  <TableColumn fx:id="UnfinishedBusPrice" prefWidth="92.0" styleClass="Col" text="Business apart" />
+                  <TableColumn fx:id="UnfinishedEcoPrice" prefWidth="93.60003662109375" styleClass="Col" text="Economy apart" />
+                  <TableColumn fx:id="UnfinishedSoldApartments" prefWidth="44.7999267578125" styleClass="Col" text="Sold apartments" />
+              </columns>
+            </TableView>
+            <TextField fx:id="UnfinishedSearchField" layoutX="14.0" layoutY="331.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0"
+            style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ain_stroy.EditAccount">
+    <children>
+        <Label layoutX="156.0" layoutY="33.0" text="Edit profile" textFill="#d10909">
+            <font>
+                <Font name="Bell MT" size="23.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="firstname" layoutX="74.0" layoutY="117.0" promptText="Firstname"
+                   style="-fx-border-color: #000000; -fx-border-radius: 6;"/>
+        <TextField fx:id="lastname" layoutX="74.0" layoutY="156.0" promptText="Lastname"
+                   style="-fx-border-color: #000000; -fx-border-radius: 6;"/>
+        <TextField fx:id="password" layoutX="74.0" layoutY="197.0" promptText="Password"
+                   style="-fx-border-color: #000000; -fx-border-radius: 6;"/>
+        <Button fx:id="save" layoutX="184.0" layoutY="262.0" mnemonicParsing="false" styleClass="WhiteBlackButton"
+                stylesheets="@style.css" text="Save" textFill="#c90e0e">
+            <font>
+                <Font name="Forte" size="17.0"/>
+            </font>
+        </Button>
+        <Button fx:id="choiseImage" layoutX="292.0" layoutY="103.0" mnemonicParsing="false" prefHeight="27.0"
+                prefWidth="86.0"
+                style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-radius: 10; -fx-background-color: #ffffff;"
+                text="Choise image" textFill="RED">
+            <font>
+                <Font name="Elephant" size="10.0"/>
+            </font>
+        </Button>
+        <ImageView fx:id="ImageView" fitHeight="50.0" fitWidth="50.0" layoutX="310.0" layoutY="47.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@tools/rectange.png"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

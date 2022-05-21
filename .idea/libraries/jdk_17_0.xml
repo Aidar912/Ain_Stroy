@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="jdk-17.0">
+    <CLASSES>
+      <root url="file://C:/Program Files/Java/jdk-17.0.2" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/docs/javadocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/client" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/logging" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/outlook" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/servlet" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/webapp/src/classes" />
+      <root url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6/demo/webapp/src/taglib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Desktop/Нужные программы/javamail-1.4.6" recursive="false" />
+  </library>
+</component>

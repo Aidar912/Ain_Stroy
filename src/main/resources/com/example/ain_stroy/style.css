@@ -1,0 +1,83 @@
+
+.backgroundColor {
+    -fx-background-color: linear-gradient(to bottom, #0A7AE2, #3DE2A7);
+}
+
+.backgroundColo {
+    -fx-background-color: "#CED4E9"
+}
+
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0, 0, 0, 0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.fonts {
+    -fx-font-family: "Roboto Light";
+}
+
+.fontsreg {
+    -fx-font-family: UnicaOne;
+    -fx-font-size: 24px;;
+    -fx-font-weight: 400;
+
+}
+
+.rectangle {
+    -fx-border-radius: 130px 0px 0px 130px;
+    -fx-background-radius: 130px 0px 0px 130px;
+}
+
+.button1 {
+    -fx-border-radius: 10px 10px 0px 0px;
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.button2 {
+    -fx-border-radius: 0px 0px 10px 10px;
+    -fx-background-radius: 0px 0px 10px 10px;
+}
+
+.WhiteBlackButton {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+
+}
+
+.WhiteBlackEntry1 {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-radius: 0px 10px 0px 0px;
+    -fx-background-radius: 0px 10px 0px 0px;
+}
+
+.WhiteBlackEntry2 {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px 0px 0px 0px;
+    -fx-background-radius: 10px 0px 0px 0px;
+}
+
+.Text {
+    -fx-font-family: "Book Antiqua";
+    -fx-font-size: 12px;
+}
+
+.Col {
+    -fx-border-color: "#000000";
+    -fx-border-radius: 10px;
+    -fx-background-color: "#ffffff";
+    -fx-background-radius: 10px;
+    -fx-text-fill:  #061F3E;
+}
+
+.Text2 {
+    -fx-font-family: "Book Antiqua";
+    -fx-font-size: 12px;
+}
+.table-row-cell:selected .text{
+    -fx-fill: red;
+}
+
+

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="727.0" style="-fx-background-color: #061F3E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ain_stroy.hrManager">
+    <children>
+        <AnchorPane fx:id="AnchorPersonnelChanges" layoutX="177.0" layoutY="1.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+            <children>
+                <TableView fx:id="PersChTable" layoutX="26.0" layoutY="162.0" prefHeight="200.0" prefWidth="438.0" styleClass="Text" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="Firstname" prefWidth="150.39995956420898" styleClass="Col" text="Firstname" />
+                        <TableColumn fx:id="Lastname" prefWidth="185.6000518798828" styleClass="Col" text="Lastname" />
+                        <TableColumn fx:id="PositionCol" prefWidth="96.00006103515625" styleClass="Col" text="Position" />
+                    </columns>
+                </TableView>
+                <Line endX="100.0" layoutX="-61.0" layoutY="15.0" startX="99.99998474121094" startY="34.399993896484375" stroke="RED" />
+                <TextField fx:id="NameTextField" layoutX="69.0" layoutY="92.0" />
+                <Button fx:id="SaveButton" layoutX="400.0" layoutY="376.0" mnemonicParsing="false" style="-fx-background-color: #061F3E;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="Broadway" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="69.0" layoutY="60.0" text="Name" textFill="#061f3e">
+                    <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="250.0" layoutY="60.0" text="Position" textFill="#061f3e">
+                    <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="PositionComBox" layoutX="246.0" layoutY="92.0" prefWidth="150.0" promptText="Position" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 3;" styleClass="Text2" stylesheets="@style.css" />
+                <Label layoutX="82.0" layoutY="29.0" text="Personnel changes" textFill="RED">
+                    <font>
+                        <Font name="Book Antiqua" size="20.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="PCSearchField" layoutX="26.0" layoutY="375.0" promptText="Search" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="103.0" fitWidth="109.0" layoutX="62.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="63.0" AnchorPane.topAnchor="1.0">
+            <image>
+                <Image url="@tools/rectange.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="82.0" layoutY="116.0" text="User name:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="106.0">
+            <font>
+                <Font name="Arial Black" size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="82.0" layoutY="138.0" text="Account type:" textFill="WHITE" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="128.0">
+            <font>
+                <Font name="Arial Black" size="10.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelUserName" layoutX="143.0" layoutY="104.0" prefHeight="18.0" prefWidth="86.0" text="  " textFill="RED">
+            <font>
+                <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelAccountType" layoutX="151.0" layoutY="126.0" prefHeight="18.0" prefWidth="69.0" text="   " textFill="RED">
+            <font>
+                <Font name="Bodoni MT Black" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="PersChang" layoutX="10.0" layoutY="179.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button1" stylesheets="@style.css" text="Personnel changes" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="179.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="Salar" layoutX="10.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="229.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Salaries" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="209.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="Vacation" layoutX="10.0" layoutY="239.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Allow a vacation" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="239.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="DeleteUser" layoutX="10.0" layoutY="268.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Dismiss an employee" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="268.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="Resume" contentDisplay="TOP" layoutX="10.0" layoutY="298.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="View resume" textFill="#f7f7f7" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="298.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="AboutTheProgram" layoutX="10.0" layoutY="384.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="About the program" textFill="WHITE" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="Exit" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="415.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" styleClass="button2" stylesheets="@style.css" text="&lt;             Exit" textFill="#e70909" AnchorPane.bottomAnchor="3.6" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="EditAccount" contentDisplay="TOP" layoutX="10.0" layoutY="357.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #061F3E; -fx-border-color: #ffffff;" text="Edit account" textFill="#f7f7f7" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="Broadway" size="12.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="ProfileImage" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="90.0">
+            <image>
+                <Image url="@tools/rectange.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="AnchorSalaries" layoutX="229.0" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.7999999999999545" AnchorPane.topAnchor="7.0">
+            <children>
+                <Line endX="100.0" layoutX="-55.0" layoutY="22.0" startX="99.99998474121094" startY="34.399993896484375" stroke="RED" />
+                <Label layoutX="66.0" layoutY="26.0" text="Salaries" textFill="RED">
+                    <font>
+                        <Font name="Book Antiqua" size="20.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="SalaryTable" layoutX="26.0" layoutY="172.0" prefHeight="200.0" prefWidth="438.0" styleClass="Text" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="FirstnameSal" prefWidth="150.39995956420898" styleClass="Col" text="Firstname" />
+                        <TableColumn fx:id="LastnameSal" prefWidth="185.6000518798828" styleClass="Col" text="Lastname" />
+                        <TableColumn fx:id="Salaries" prefWidth="96.00006103515625" styleClass="Col" text="Salaries" />
+                    </columns>
+                </TableView>
+                <Button fx:id="SaveSalButton" layoutX="409.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: #061F3E;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="Broadway" size="12.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="NameSalTextFiled" layoutX="60.0" layoutY="89.0" />
+                <TextField fx:id="SalaryTextField" layoutX="260.0" layoutY="89.0" />
+                <Label layoutX="60.0" layoutY="65.0" text="Name" textFill="#061f3e">
+                    <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="260.0" layoutY="65.0" text="Salary" textFill="#061f3e">
+                    <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="SalarSearchField" layoutX="26.0" layoutY="379.0" promptText="Search" />
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="AnchorVacation" layoutX="335.0" layoutY="69.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.7999999999999545" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="100.0" layoutX="-78.0" layoutY="15.0" startX="99.99998474121094" startY="34.399993896484375" stroke="RED" />
+            <Label layoutX="43.0" layoutY="19.0" text="Allow a vacation" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="VacationTable" editable="true" layoutX="12.0" layoutY="66.0" prefHeight="247.0" prefWidth="466.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="NameVacation" prefWidth="105.60005187988281" text="Name">
+                     <styleClass>
+                        <String fx:value="Col" />
+                        <String fx:value="Text" />
+                     </styleClass>
+                  </TableColumn>
+                  <TableColumn fx:id="LastVacation" prefWidth="96.79998779296875" text="Last vacation">
+                     <styleClass>
+                        <String fx:value="Col" />
+                        <String fx:value="Text" />
+                     </styleClass>
+                  </TableColumn>
+                  <TableColumn fx:id="paidVacation" prefWidth="91.20001220703125" text="Paid vacation">
+                     <styleClass>
+                        <String fx:value="Col" />
+                        <String fx:value="Text" />
+                     </styleClass>
+                  </TableColumn>
+                  <TableColumn fx:id="DaysVacation" prefWidth="47.199951171875" text="Days">
+                     <styleClass>
+                        <String fx:value="Col" />
+                        <String fx:value="Text" />
+                     </styleClass>
+                  </TableColumn>
+                  <TableColumn fx:id="StatusCol" prefWidth="118.4000244140625" text="Status">
+                     <styleClass>
+                        <String fx:value="Col" />
+                        <String fx:value="Text" />
+                     </styleClass>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Button fx:id="Allow" layoutX="43.0" layoutY="365.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-border-color: #061F3E; -fx-border-radius: 6;" text="Allow" textFill="#061f3e">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Disallow" layoutX="132.0" layoutY="365.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-border-color: #061F3E; -fx-border-radius: 6;" text="Disallow" textFill="#061f3e">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="IDUSERS" layoutX="43.0" layoutY="324.0" promptText="Name" />
+            <TextField fx:id="VacationSearchField" layoutX="245.0" layoutY="324.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneDismiss" layoutX="230.00000000000006" layoutY="7.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="5.7999999999999545" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.0" endY="32.20001220703125" layoutX="141.0" layoutY="15.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="54.0" layoutY="17.0" text="Dismiss an employee" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="21.0" />
+               </font>
+            </Label>
+            <TableView fx:id="DismissTable" layoutX="14.0" layoutY="68.0" prefHeight="208.0" prefWidth="466.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="NameDismiss" prefWidth="89.60005187988281" styleClass="Col" text="Name" />
+                <TableColumn fx:id="FirstnameDismiss" prefWidth="89.5999755859375" styleClass="Col" text="Firstname" />
+                  <TableColumn fx:id="LoginDismiss" prefWidth="78.4000244140625" styleClass="Col" text="Login" />
+                  <TableColumn fx:id="PasswordDismiss" prefWidth="73.5999755859375" styleClass="Col" text="Password" />
+                  <TableColumn fx:id="PositionDismiss" prefWidth="67.99993896484375" styleClass="Col" text="Position" />
+                  <TableColumn fx:id="SalaryDismiss" prefWidth="67.2000732421875" styleClass="Col" text="Salary" />
+              </columns>
+            </TableView>
+            <TextField fx:id="DismissName" layoutX="14.0" layoutY="288.0" promptText="Name" />
+            <Button fx:id="DismissButton" layoutX="406.0" layoutY="374.0" mnemonicParsing="false" style="-fx-background-color: #061F3E;" text="Dismiss" textFill="WHITE">
+               <font>
+                  <Font name="Broadway" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="DisSearchField" layoutX="289.0" layoutY="288.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AboutTheProgramPane" layoutX="364.0" layoutY="109.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <ScrollPane layoutX="14.0" layoutY="56.0" prefHeight="356.0" prefWidth="491.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.60000000000002">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="554.0" prefWidth="480.0">
+                     <children>
+                        <TextFlow fx:id="AboutTheProgrammText" layoutX="20.0" layoutY="8.0" prefHeight="518.0" prefWidth="452.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="288.5367660522461" />
+                           </children>
+                        </TextFlow>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label layoutX="48.0" layoutY="23.0" text="About the program" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="-69.0" layoutY="16.0" startX="99.99998474121094" startY="41.399993896484375" stroke="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPaneResume" layoutX="229.0" layoutY="11.0" prefHeight="425.0" prefWidth="491.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.rightAnchor="6.800000000000011" AnchorPane.topAnchor="7.0">
+         <children>
+            <Line endX="-100.0" endY="34.600006103515625" layoutX="134.0" layoutY="18.0" startX="-100.0" stroke="RED" />
+            <Label layoutX="55.0" layoutY="24.0" text="View resume" textFill="RED">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Label>
+            <TableView fx:id="ResumeTable" layoutX="14.0" layoutY="87.0" prefHeight="288.0" prefWidth="466.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="ResumeName" prefWidth="144.00001525878906" styleClass="Col" text="Name" />
+                <TableColumn fx:id="ResumeLastname" prefWidth="135.20001220703125" styleClass="Col" text="Firstaname" />
+                  <TableColumn fx:id="ResumePosition" prefWidth="84.79998779296875" styleClass="Col" text="Position" />
+                  <TableColumn fx:id="ResumeNumber" prefWidth="96.79998779296875" styleClass="Col" text="Number" />
+              </columns>
+            </TableView>
+            <TextField fx:id="ResumeSearch" layoutX="14.0" layoutY="384.0" promptText="Search" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
